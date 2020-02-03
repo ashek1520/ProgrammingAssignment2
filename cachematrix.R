@@ -45,6 +45,7 @@ cacheSolve <- function(x, ...) {
     return(matInverse)
   }
   myMat <- cacheMatrix$get()
-  matInverse <- myMat ^ -1
+  matInverse <- solve(myMat)
   cacheMatrix$setInverse(matInverse)
+  return(matInverse)
 }
